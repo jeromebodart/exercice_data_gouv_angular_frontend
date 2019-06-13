@@ -3,13 +3,13 @@ export class InformationsEtablissement {
 	enseigne: string;
 	ind_publipo: number;
 	siege: number;
-	statut_diffusion: number;
+	statut_diffusion: string;
 	date_diffusion_base: string;
 	constructor(id: number,
 	enseigne: string,
 	ind_publipo: number,
 	siege: number,
-	statut_diffusion: number,
+	statut_diffusion: string,
 	date_diffusion_base: string) {
 		this.id = id;
 		this.enseigne = enseigne;
