@@ -12,10 +12,14 @@ import { HeaderComponent } from './header/header.component';
 import { EntrepriseListComponent } from './entreprise-list/entreprise-list.component';
 import { SingleEntrepriseComponent } from './entreprise-list/single-entreprise/single-entreprise.component';
 import { EntrepriseFormComponent } from './entreprise-list/entreprise-form/entreprise-form.component';
+// tslint:disable-next-line: max-line-length
 import { IdentificationEntrepriseComponent } from './entreprise-list/single-entreprise/identification-entreprise/identification-entreprise.component';
+// tslint:disable-next-line: max-line-length
 import { CaracteristiquesEconomiquesEntrepriseComponent } from './entreprise-list/single-entreprise/caracteristiques-economiques-entreprise/caracteristiques-economiques-entreprise.component';
 import { InformationsSiegeComponent } from './entreprise-list/single-entreprise/informations-siege/informations-siege.component';
+// tslint:disable-next-line: max-line-length
 import { EtablissementListComponent } from './entreprise-list/single-entreprise/etablissements/etablissement-list/etablissement-list.component';
+// tslint:disable-next-line: max-line-length
 import { SingleEtablissementComponent } from './entreprise-list/single-entreprise/etablissements/etablissement-list/single-etablissement/single-etablissement.component';
 import { EtablissementFormComponent } from './entreprise-list/single-entreprise/etablissements/etablissement-list/etablissement-form/etablissement-form.component';
 import { AdresseDeclareeFormComponent } from './entreprise-list/single-entreprise/etablissements/etablissement-list/etablissement-form/adresse-declaree-form/adresse-declaree-form.component';
@@ -35,18 +39,8 @@ import { CaracteristiquesEconomiquesEntrepriseFormComponent } from './entreprise
 import { InformationsSiegeFormComponent } from './entreprise-list/entreprise-form/informations-siege-form/informations-siege-form.component';
 
 
-const appRoutes: Routes = [
-  { path: 'auth/signup', component: SignupComponent },
-  { path: 'auth/signin', component: SigninComponent },
-  { path: 'entreprises', component: EntrepriseListComponent },
-  { path: 'entreprises/new', component: EntrepriseFormComponent },
-  { path: 'entreprises/view/:id', component: SingleEntrepriseComponent },
-  { path: 'entreprises/edit/:id', component: EntrepriseFormComponent },
-  { path: 'entreprises/:id/etablissements', component: EntrepriseListComponent },
-  { path: 'entreprises/:id/etablissements/new', component: EntrepriseFormComponent },
-  { path: 'entreprises/:id/etablissements/view/:id', component: SingleEntrepriseComponent },
-  { path: 'entreprises/:id/etablissements/edit/:id', component: EntrepriseFormComponent },
-];
+import { EntreprisesService } from './services/entreprises.service';
+import { EtablissementsService } from './services/etablissements.service';
 
 @NgModule({
   declarations: [
@@ -77,17 +71,16 @@ const appRoutes: Routes = [
     InformationsEtablissementComponent,
     AdresseGeographiqueComponent,
     LocalisationGeographiqueComponent,
-    CaracteristiquesEconomiquesEtablissementComponent
+    CaracteristiquesEconomiquesEtablissementComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [EntreprisesService, EtablissementsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

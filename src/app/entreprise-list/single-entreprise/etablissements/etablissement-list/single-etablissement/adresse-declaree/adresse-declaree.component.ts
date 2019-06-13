@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { AdresseDeclaree } from 'src/app/models/etablissements/adresse-declaree/adresse-declaree.model';
 
 @Component({
   selector: 'app-adresse-declaree',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdresseDeclareeComponent implements OnInit {
 
+  @Input() l1Declaree: string;
   constructor() { }
 
   ngOnInit() {

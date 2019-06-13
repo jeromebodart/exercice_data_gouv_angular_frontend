@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IdentificationEntreprise } from 'src/app/models/identification-entreprise/identification-entreprise.model';
 
 @Component({
   selector: 'app-identification-entreprise',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./identification-entreprise.component.scss']
 })
 export class IdentificationEntrepriseComponent implements OnInit {
-
+  @Input() identification_entreprise: IdentificationEntreprise;
   constructor() { }
 
   ngOnInit() {

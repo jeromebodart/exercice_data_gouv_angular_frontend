@@ -10,29 +10,29 @@ export class Etablissement {
 	id: number;
 	nic: number;
 	entreprise: Entreprise;
-	adresse_declaree: AdresseDeclaree;
-	adresse_normalisee: AdresseNormalisee;
+	adresseDeclaree: AdresseDeclaree;
+	adresseNormalisee: AdresseNormalisee;
 	info: InformationsEtablissement;
-	adressegeographique: AdresseGeographique;
-	localisationgeographique: LocalisationGeographique;
+	adresseGeographique: AdresseGeographique;
+	localisationGeographique: LocalisationGeographique;
 	economies: CaracteristiquesEconomiques;
 	constructor(id: number,
 	nic: number,
 	entreprise: Entreprise,
-	adresse_declaree: AdresseDeclaree,
-	adresse_normalisee: AdresseNormalisee,
+	adresseDeclaree: AdresseDeclaree,
+	adresseNormalisee: AdresseNormalisee,
 	info: InformationsEtablissement,
-	adressegeographique: AdresseGeographique,
-	localisationgeographique : LocalisationGeographique,
+	adresseGeographique: AdresseGeographique,
+	localisationGeographique : LocalisationGeographique,
 	economies: CaracteristiquesEconomiques) {
 		this.id = id;
 		this.nic = nic;
 		this.entreprise = entreprise;
-		this.adresse_declaree = adresse_declaree;
-		this.adresse_normalisee = adresse_normalisee;
+		this.adresseDeclaree = adresseDeclaree;
+		this.adresseNormalisee = adresseNormalisee;
 		this.info = info;
-		this.adressegeographique = adressegeographique;
-		this.localisationgeographique = localisationgeographique;
+		this.adresseGeographique = adresseGeographique;
+		this.localisationGeographique = localisationGeographique;
 		this.economies = economies;
 	}
 }

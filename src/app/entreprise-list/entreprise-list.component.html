@@ -1,3 +1,10 @@
-<p>
-  entreprise-list works!
-</p>
+<h2 style="margin: 10px;">Entreprises</h2>
+<button (click)="onGetAllEntreprises()">Entreprises</button>
+<app-single-entreprise  class="media-list" *ngFor="let entreprise of entrepriselists"
+                        [id]="entreprise.id"
+                        [siren]="entreprise.siren"
+                        [siege]="entreprise.siege"
+                        [identification_entreprise]="entreprise.identification_entreprise"
+                        [caracteristiques_economiques]="entreprise.caracteristiques_economiques"
+                        [etablissements] = "entreprise.etablissements">
+</app-single-entreprise>

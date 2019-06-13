@@ -1,3 +1,19 @@
-<p>
-  etablissement-list works!
-</p>
+<app-single-etablissement  class="media-list" *ngFor="let etablissement of etablissements"
+                          [id]="etablissement.id"
+                          [nic]="etablissement.nic"
+                          [entreprise] = "etablissement.entreprise"
+                          [adresseDeclaree] = "etablissement.adresseDeclaree"
+                          [adresseNormalisee] = "etablissement.adresseNormalisee"
+                          [info] = "etablissement.info"
+                          [adresseGeographique] = "etablissement.adresseGeographique"
+                          [localisationGeographique] = "etablissement.localisationGeographique"
+                          [economies] = "etablissement.economies">
+</app-single-etablissement>
+
+	 
+	 
+	 
+	 
+	 
+	 
+	 
