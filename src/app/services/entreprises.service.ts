@@ -35,6 +35,15 @@ export class EntreprisesService {
     );
   }
 
+  getByIdEntreprise(id: number) {
+    this.http.get(`$root/${id}`).subscribe(
+      tab => {
+        this.entrepriselists = tab;
+        this.emitEntrepriseSubject();
+      }
+    )
+  }
+
   addEntreprise(entreprise : Entreprise): Observable<Entreprise> {
     return this.http.post<Entreprise>(`${root}`, entreprise, httpOptions)
     .pipe(

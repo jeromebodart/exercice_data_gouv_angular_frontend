@@ -7,7 +7,7 @@ import { CaracteristiquesEconomiques } from 'src/app/models/caracteristiques-eco
   styleUrls: ['./caracteristiques-economiques-entreprise.component.scss']
 })
 export class CaracteristiquesEconomiquesEntrepriseComponent implements OnInit {
-  @Input() caracteristiques_economiques: CaracteristiquesEconomiques;
+  @Input() caracteristiquesEconomiques: CaracteristiquesEconomiques;
   constructor() { }
 
   ngOnInit() {

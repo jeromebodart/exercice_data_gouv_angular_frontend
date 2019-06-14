@@ -17,6 +17,7 @@ const root = 'http://localhost:9000/etablissements';
   providedIn: 'root'
 })
 export class EtablissementsService {
+ 
   private etablissementlists: any= [];
   etablissementsSubject = new Subject<Etablissement[]>();
   constructor(
@@ -34,9 +35,17 @@ export class EtablissementsService {
     this.http.get(`${root}/all`).subscribe(
       tab => {
         this.etablissementlists = tab;
-        this.emitEtablissementsSubject();
       }
     );
+    this.emitEtablissementsSubject();
+  }
+  getByIdEtablissement(id: number) {
+    this.http.get(`${root}/${id}`).subscribe(
+      tab => {
+        this.etablissementlists = tab;
+      }
+    );
+    this.emitEtablissementsSubject();
   }
 
 

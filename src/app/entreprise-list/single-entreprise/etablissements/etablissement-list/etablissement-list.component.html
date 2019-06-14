@@ -1,14 +1,14 @@
-<app-single-etablissement  class="media-list" *ngFor="let etablissement of etablissements"
-                          [id]="etablissement.id"
-                          [nic]="etablissement.nic"
-                          [entreprise] = "etablissement.entreprise"
-                          [adresseDeclaree] = "etablissement.adresseDeclaree"
-                          [adresseNormalisee] = "etablissement.adresseNormalisee"
-                          [info] = "etablissement.info"
-                          [adresseGeographique] = "etablissement.adresseGeographique"
-                          [localisationGeographique] = "etablissement.localisationGeographique"
-                          [economies] = "etablissement.economies">
-</app-single-etablissement>
+<div class="media-list" *ngFor="let etablissement of etablissements">
+    <!--
+<app-single-etablissement [etablissement] = "etablissement"
+                                [id_entreprise] = "id_entreprise">              
+    </app-single-etablissement>
+
+    -->
+
+    <button (click)="onViewEtablissement(etablissement.id)">Informations</button>
+</div>
+
 
 	 
 	 

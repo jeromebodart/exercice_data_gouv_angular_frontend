@@ -1,4 +1,2 @@
-<p>NIC :  {{ nic }}</p>
-<!--
-<app-adresse-declaree [l1Declaree]=adresseDeclaree.l1Declaree></app-adresse-declaree>
--->
+<p>NIC :  {{ etablissement.nic }}</p>
+<app-adresse-normalisee [adresseNormalisee]="etablissement.adresse_normalisee"></app-adresse-normalisee>
