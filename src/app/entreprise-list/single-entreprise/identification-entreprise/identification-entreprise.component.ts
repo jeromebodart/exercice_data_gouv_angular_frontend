@@ -7,7 +7,7 @@ import { IdentificationEntreprise } from 'src/app/models/identification-entrepri
   styleUrls: ['./identification-entreprise.component.scss']
 })
 export class IdentificationEntrepriseComponent implements OnInit {
-  @Input() identification_entreprise: IdentificationEntreprise;
+  @Input() identificationEntreprise: IdentificationEntreprise;
   constructor() { }
 
   ngOnInit() {

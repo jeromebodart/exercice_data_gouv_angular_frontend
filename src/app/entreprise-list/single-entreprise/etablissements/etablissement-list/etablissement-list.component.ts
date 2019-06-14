@@ -10,37 +10,18 @@ import { EtablissementsService } from 'src/app/services/etablissements.service';
   styleUrls: ['./etablissement-list.component.scss']
 })
 export class EtablissementListComponent implements OnInit {
-
-
+  @Input() id_entreprise: number;
   @Input() etablissements: Etablissement[];
-  etablissementSubscription: Subscription;
-  
-  constructor(
-    private etablissementsService: EtablissementsService,
-    private router: Router
-  ) {
 
-   }
-
+  constructor(private router: Router) {
+    
+  }
   ngOnInit() {
-    this.etablissementSubscription = this.etablissementsService.etablissementsSubject.subscribe(
-      (etablissement: Etablissement[]) => {
-        this.etablissements = etablissement;
-      },
-      (error) => {
-        console.log('Erreur ! : ' + error);
-      }
-    );
-  }
 
-  ngOnDestroy() {
-    this.etablissementSubscription.unsubscribe();
   }
-
-  onGetAllEntreprises() {
-    this.etablissementsService.getAllEtablissement();
+  onViewEtablissement(id: number) {
+    this.router.navigate(['\entreprises',this.id_entreprise,'etablissements','view', id])
   }
-
 }
 
 

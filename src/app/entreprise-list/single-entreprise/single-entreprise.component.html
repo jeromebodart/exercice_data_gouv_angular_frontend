@@ -1,17 +1,18 @@
 <li [ngClass]="{'media thumbnail': true}">
     <div class="media-body">
       <div style="margin: 10px;">
-        <h3 class="media-heading">{{ siren }}
-        <i class="pull-right" style="font-size: initial;">{{ postDate | date: "MMM d, y h:mm a" | uppercase }}</i>
+        <h3 class="media-heading">SIREN : {{ siren }}
         </h3>
         <div>
           <app-informations-siege [siege]=siege></app-informations-siege>
-          <app-identification-entreprise [identification_entreprise]=identification_entreprise></app-identification-entreprise>
-          <app-caracteristiques-economiques-entreprise [caracteristiques_economiques]=caracteristiques_economiques></app-caracteristiques-economiques-entreprise>
+          <app-identification-entreprise [identificationEntreprise]=identification_entreprise></app-identification-entreprise>
+          <app-caracteristiques-economiques-entreprise [caracteristiquesEconomiques]=caracteristiques_economiques></app-caracteristiques-economiques-entreprise>
         </div>
-        <app-etablissement-list  [etablissements]=etablissements></app-etablissement-list>
+        <app-etablissement-list  [etablissements]=etablissements
+                                  [id_entreprise]=id></app-etablissement-list>
       </div>
     </div>
+    <!-- <button (click)="getByIdEntreprise(id)">Entreprise par id</button>-->
 </li>
 
 
